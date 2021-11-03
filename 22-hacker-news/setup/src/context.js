@@ -14,7 +14,7 @@ const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?'
 const initialState = {
   isLoading: true,
   hits: [],
-  query: 'javascript',
+  query: 'internet',
   page: 0,
   nbPages: 0,
 }
@@ -44,15 +44,14 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
-  }, [state.query])
+  }, [state.query, state.page])
 
   const handleSearch = (query) => {
     dispatch({ type: HANDLE_SEARCH, payload: query })
   }
 
   const handlePage = (value) => {
-    console.log(value)
-    //dispatch;
+    dispatch({ type: HANDLE_PAGE, payload: value })
   }
 
   return (
