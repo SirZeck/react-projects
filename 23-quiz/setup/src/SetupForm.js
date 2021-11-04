@@ -32,7 +32,17 @@ const SetupForm = () => {
               value={quiz.category}
               onChange={handleChange}
             >
+              <option value='general'>General Knowledge</option>
+              <option value='books'>Books</option>
+              <option value='maths'>Mathematics</option>
+              <option value='computers'>Computers</option>
+              <option value='science'>Science & Nature</option>
+              <option value='music'>Music</option>
+              <option value='film'>Film</option>
+              <option value='theatre'>Musicals & Theatres</option>
               <option value='sports'>Sports</option>
+              <option value='anime'>Anime & Manga</option>
+              <option value='video'>Video Games</option>
               <option value='history'>History</option>
               <option value='politics'>Politics</option>
             </select>
